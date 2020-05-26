@@ -22,6 +22,8 @@ libpipewire02_package() {
 	short_desc+=" - pipewire library"
 	pkg_install() {
 		vmove "usr/lib/libpipewire-0.2.so.*"
+		vmove "usr/lib/pipewire-0.2"
+		vmove "usr/lib/spa"
 	}
 }
 
@@ -36,21 +38,6 @@ pipewire02-devel_package() {
 		vmove usr/lib/libpipewire-0.2.so
 	}
 }
-
-libspa-ffmpeg02_package() {
-	short_desc+=" - ffmpeg plugins"
-	pkg_install() {
-		vmove usr/lib/spa/ffmpeg
-	}
-}
-
-libspa-bluetooth02_package() {
-	short_desc+=" - bluetooth plugins"
-	pkg_install() {
-		vmove usr/lib/spa/bluez5
-	}
-}
-
 gstreamer1-pipewire02_package() {
 	short_desc+=" - gstreamer plugin"
 	pkg_install() {
